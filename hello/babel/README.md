@@ -1,5 +1,3 @@
-## 命令行转换
-
 ```sh
 npm install -g babel
 
