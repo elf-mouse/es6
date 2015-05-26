@@ -1,0 +1,21 @@
+<script src="//google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="//google.github.io/traceur-compiler/src/bootstrap.js"></script>
+<script>traceur.options.experimental = true;</script>
+<script>
+// 在线转换
+$traceurRuntime.ModuleStore.getAnonymousModule(function() {
+    "use strict";
+
+    var Calc = function Calc() {
+        console.log('Calc constructor');
+    };
+
+    ($traceurRuntime.createClass)(Calc, {add: function(a, b) {
+        return a + b;
+    }}, {});
+
+    var c = new Calc();
+    console.log(c.add(4, 5));
+    return {};
+});
+</script>
