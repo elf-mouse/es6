@@ -14,17 +14,19 @@ function demo1() {
 
 // Unicode字符表示法
 function demo2() {
-  console.log(/\u{61}/.test('a')); // false
-  console.log(/\u{61}/u.test('a')); // true
-  console.log(/\u{20BB7}/u.test('𠮷')); // true
+  var a = /\u{61}/.test('a'); // false
+  var b = /\u{61}/u.test('a'); // true
+  var c = /\u{20BB7}/u.test('𠮷'); // true
+  console.log(a, b, c);
 }
 
 // 量词
 function demo3() {
-  console.log(/a{2}/.test('aa')); // true
-  console.log(/a{2}/u.test('aa')); // true
-  console.log(/𠮷{2}/.test('𠮷𠮷')); // false
-  console.log(/𠮷{2}/u.test('𠮷𠮷')); // true
+  var a = /a{2}/.test('aa'); // true
+  var b = /a{2}/u.test('aa'); // true
+  var c = /𠮷{2}/.test('𠮷𠮷'); // false
+  var d = /𠮷{2}/u.test('𠮷𠮷'); // true
+  console.log(a, b, c, d);
 }
 
 // 预定义模式
