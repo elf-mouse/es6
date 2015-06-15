@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blocking</title>
+</head>
+<body>
+    <p>You can’t click the button while the browser process is blocked.</p>
+    <p><a id="block" href="">Block for 5 seconds</a><p>
+    <button>This is a button</button>
+    <div id="statusMessage"></div>
+    <script>
+        document.getElementById('block')
+        .addEventListener('click', onClick);
+
+        function onClick(event) {
+            event.preventDefault();
+
+            setStatusMessage('Blocking...');
+
+            // Give browser the opportunity to display status message
+            setTimeout(function () {
+                blockMainThread(5000);
+                setStatusMessage('Done');
+            }, 0);
+        }
+        function setStatusMessage(msg) {
+            document.getElementById('statusMessage').textContent = msg;
+        }
+        function blockMainThread(milliseconds) {
+            var start = Date.now();
+            while ((Date.now() - start) < milliseconds);
+        }
+    </script>
+</body>
+</html>
