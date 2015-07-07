@@ -1,0 +1,13 @@
+node_modules
+build
+dist
+dist-intermediate
+*.log
+
+# Assets aren't under license
+src/static/android-chrome*
+src/static/apple-touch-icon*
+src/static/favicon*
+src/static/memamug*
+src/static/mstile*
+src/static/browserconfig*
