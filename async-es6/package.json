@@ -1,0 +1,7 @@
+{
+  "name": "async-es6",
+  "version": "1.0.0",
+  "dependencies": {
+    "q": "^1.4.1"
+  }
+}
