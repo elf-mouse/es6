@@ -2,12 +2,12 @@
 
 ```js
 // Before:
-something.on('start', function(bananas) {  
+something.on('start', function(bananas) {
   return bananas > 10;
 });
 
 ----------
 
 // After:
-something.on('start', bananas => bananas > 10); 
+something.on('start', bananas => bananas > 10);
 ```

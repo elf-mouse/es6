@@ -6,7 +6,7 @@
 // I want to remove() all docs
 db.allDocs({include_docs: true}).then(function (result) {
   result.rows.forEach(function (row) {
-    db.remove(row.doc);  
+    db.remove(row.doc);
   });
 }).then(function () {
   // I naively believe all docs have been removed() now!

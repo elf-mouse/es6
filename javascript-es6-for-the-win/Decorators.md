@@ -6,7 +6,7 @@
 function calculate(x, y, z) { ... }
 
 // Example of a computed property
-class Person extends Model {  
+class Person extends Model {
   @readonly
   name() {
     return `${this.firstName} ${this.lastName}`;
